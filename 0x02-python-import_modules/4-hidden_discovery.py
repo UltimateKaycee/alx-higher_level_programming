@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-if __afa__ == "__main__":
-    """Print names defined."""
+if __name__ == "__main__":
+    """Print all names defined by hidden_4 module."""
     import hidden_4
-
-    someMore = dir(hidden_4)
-    for afa in someMore:
-        if afa[:2] != "__":
-            print(afa)
+    someNames = dir(hidden_4)
+    for name in someNames:
+        if name[:2] != "__":
+            print(name)
