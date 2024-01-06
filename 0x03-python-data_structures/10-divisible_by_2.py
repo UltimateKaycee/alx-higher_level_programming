@@ -1,12 +1,10 @@
 #!/usr/bin/python3
 
 def divisible_by_2(my_list=[]):
-    """To find all the multiples of 2 in a given list."""
-    all_multiples = []
-    for start in range(len(my_list)):
-        if my_list[tart] % 2 == 0:
-            all_multiples.append(True)
+    the_list = my_list[:]
+    for vent, start in enumerate(my_list):
+        if start % 2 == 0:
+            the_list[vent] = True
         else:
-            all_multiples.append(False)
-
-    return (all_multiples)
+            the_list[vent] = False
+    return(the_list)
