@@ -1,0 +1,147 @@
+================================
+Using module 5-text_indentation.py
+================================
+
+Module for function text-indentation ``text_indentation(text)``.
+
+Procedure
+=========
+
+Text output with two new lines after each of these characters ``.``, ``?``,
+and ``:``.
+
+::
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation("Welcome!")
+    Welcome!
+    <BLANKLINE>
+
+No spaces at beginning of line.
+
+::
+
+    >>> text_indentation("   Hey Guest.")
+    Hey Guest.
+    <BLANKLINE>
+
+::
+
+    >>> text_indentation("          ")
+
+No spaces at end of the lines.
+
+::
+
+    >>> text_indentation("Welcome.   ")
+    Welcome.
+    <BLANKLINE>
+
+::
+
+    >>> text_indentation("    Hey there.    Welcome.   ")
+    Hey there.
+    <BLANKLINE>
+    Welcome.
+    <BLANKLINE>
+
+New lines printed only for the characters ``.``, ``?``, and ``:`` -
+No new iine with text not ending with any of these characters.
+
+::
+
+    >>> text_indentation("Didn't end as so")
+    Didn't end as so
+
+New lines in string are printed.
+
+::
+
+    >>> text_indentation("Followed by newline!:\nNewline.")
+    Followed by newline!:
+    <BLANKLINE>
+    <BLANKLINE>
+    Newline.
+    <BLANKLINE>
+
+::
+
+    >>> text_indentation("\n\n\n\n Here, four new lines.")
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+    Here, four new lines
+    <BLANKLINE>
+
+::
+    >>> text_indentation("Here is \n another new line.")
+    Here is 
+    another new line.
+    <BLANKLINE>
+
+Another example:
+
+::
+
+    >>> text_indentation("oooop oooop oooopm oooopdo, oooop oooop "
+    ... "oooop. pQouoonam modo? oooop oooop oooop litteram oooop an oooopsn "
+    ... "oooopoooop eeepoon oooop oooop: oooop oooop. oooop, "
+    ... "oooop: oooop oooop oooop? oooop, oooopt, finem illi videri "
+    ... "nihil dolere. Transfer idem ad modestiam vel temperantiam, quae est "
+    ... "moderatio cupiditatum rationi oboediens. Si id dicis, vicimus. Inde "
+    ... "oooop vario sex oooopilla a oooopDipylo stadia oooop. Sin oooop quid "
+    ... "oooop, postea. oooop oooop affectio oooop cuique oooop atque oooop, "
+    ... "oooop dico. oooop oooop oooopt alium alio beatiorem! Iam oooop "
+    ... "oooop") # doctest: +NORMALIZE_WHITESPACE
+    oooop oooop oooop oooop oooop, oooop oooop oooop.
+    <BLANKLINE>
+    oooop oooop?
+    <BLANKLINE>
+    oooop oooop oooop oooop oooop oooop?
+    <BLANKLINE>
+    Noooopon oooop oooop:
+    <BLANKLINE>
+    oooop oooop oooop.
+    <BLANKLINE>
+    oooop oooop oooop:
+    <BLANKLINE>
+    oooop oooop oooop?
+    <BLANKLINE>
+    oooop oooop oooop.
+    <BLANKLINE>
+    oooop oooop oooop oooop oooop oooop, 
+    oooope eoooopt oooopr oooopu oooopi oboooops.
+    <BLANKLINE>
+    Goooop oooop, oooops.
+    <BLANKLINE>
+    oooop oooop oooop oooop oooop oooop.
+    <BLANKLINE>
+    Hoooop oooop oooop oooopa.
+    <BLANKLINE>
+    oooop oooop oooop oooop,qoooop.
+    <BLANKLINE>
+    Poooop oooop oooop oooop oooop oooop oooop
+
+Invalid Input
+=============
+
+Input ``text`` must be a string, else TypeError occurs.
+
+::
+
+    >>> text_indentation(9)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+::
+
+    >>> text_indentation({"Hey": 9, "Hi": 5})
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+::
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    TypeError: text must be a string
