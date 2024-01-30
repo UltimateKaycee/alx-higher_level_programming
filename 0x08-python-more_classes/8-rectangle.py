@@ -80,7 +80,8 @@ class Rectangle:
 
         rectan = []
         for v in range(self.__height):
-            [rectan.append(str(self.print_symbol)) for w in range(self.__width)]
+            [rectan.append(str(
+                self.print_symbol)) for w in range(self.__width)]
             if v != self.__height - 1:
                 rectan.append("\n")
         return ("".join(rectan))
