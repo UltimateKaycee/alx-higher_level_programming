@@ -100,8 +100,7 @@ def runner(slate, row, queens, packs):
             mom_slate = copy_slate(slate)
             mom_slate[row][x] = "Q"
             strike(mom_slate, row, x)
-            packs = runner(mom_slate, row + 1,
-                                        queens + 1, packs)
+            packs = runner(mom_slate, row + 1, queens + 1, packs)
 
     return (packs)
 
