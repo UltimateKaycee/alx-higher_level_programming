@@ -5,6 +5,7 @@
 Attributes are slate (list): A list of lists (chessboard).
     pack (list): A list of lists - solved puzzle.
 """
+
 import sys
 
 
