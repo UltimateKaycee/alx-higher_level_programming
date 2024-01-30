@@ -58,7 +58,7 @@ def strike(slate, row, col):
         if x >= len(slate):
             break
         slate[w][x] = "x"
-        w += 1
+        x += 1
     
     x = col - 1
     for w in range(row - 1, -1, -1):
