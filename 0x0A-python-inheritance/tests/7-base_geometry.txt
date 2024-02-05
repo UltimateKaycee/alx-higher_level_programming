@@ -1,20 +1,16 @@
-============
-Using module
-============
+===============================
+Using module 7-base_geometry.py
+===============================
 
+Modules for base geometry class BaseGeometry.
 
-Modules for class BaseGeometry.
-
-
-class instantiation
+Class instantiation
 ===================
 
-
-No attributes and arguments for ``BaseGeometry``.
-
+``BaseGeometry`` has no attributes and is initialized 
+with no arguments.
 
 ::
-
 
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
     >>> bg = BaseGeometry()
@@ -26,7 +22,8 @@ No attributes and arguments for ``BaseGeometry``.
     >>> print(bg) # doctest: +ELLIPSIS
     <7-base_geometry.BaseGeometry object at ...>
 
-A TypeError occurs if argument is provided.
+Any arguments for ``BaseGeometry`` results
+in TypeError.
 
 ::
 
@@ -34,13 +31,12 @@ A TypeError occurs if argument is provided.
     Traceback (most recent call last):
     TypeError: object() takes no parameters
 
+Method
+======
 
-Procedure
-=========
-
-
-There are two methods for ``BaseGeometry`` - ``area(self)`` and 
-``integer_validator(self, name, value)``. ``area(...)``
+``BaseGeometry`` has two methods - ``area(self)`` and 
+``integer_validator(self, name, value)``. ``area(...)`` is not yet
+implemented.
 
 ::
 
@@ -55,24 +51,24 @@ There are two methods for ``BaseGeometry`` - ``area(self)`` and
     Traceback (most recent call last):
     Exception: area() is not implemented
 
-
-``integer_validator(...)``, validates integer value, ``name``, is name of argument.
+``integer_validator(...)``, validates integer value
+of a paramter. ``name``, is name of argument.
+``value``, is argument to check.
 
 ::
-
 
     >>> print(bg.integer_validator) # doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
     <bound method BaseGeometry.integer_validator of <7-base_geometry.BaseGeometry 
     object at...>>
 
-The function does not run if value`` is integer.
+If ``value`` is integer, function does nothing.
 
 ::
 
 
    >>> bg.integer_validator("valid number", 1)
 
-TypeError occurs if ``value`` is not integer.
+If ``value`` is not integer, ``TypeError`` occurs.
 
 ::
 
@@ -110,8 +106,8 @@ TypeError occurs if ``value`` is not integer.
     Traceback (most recent call last):
     TypeError: absolutely every possible invalid must be an integer
 
-
-ValueError occurs if ``value`` is less <= zero.
+If ``value`` is integer, but less than or equal to zero, ValueError
+occurs.
 
 ::
 
@@ -125,8 +121,7 @@ ValueError occurs if ``value`` is less <= zero.
     Traceback (most recent call last):
     ValueError: invalid int must be greater than 0
 
-
-TypeError occurs if ``name`` and ``value`` are not supplied.
+``name`` and ``value`` must be supplied, if not, TypeError occurs.
 
 ::
 
@@ -142,8 +137,8 @@ TypeError occurs if ``name`` and ``value`` are not supplied.
     TypeError: integer_validator() missing 1 required positional argument: 
     'value'
 
-
-``name`` parameter is a string.
+The paramter ``name`` will be string and ``name`` of any
+type will be printed.
 
 ::
 
