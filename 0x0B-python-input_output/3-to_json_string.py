@@ -9,6 +9,5 @@ def to_json_string(my_obj):
 
     Arguments are my_obj: object
 
-    
-    """
+"""
     return json.dumps(my_obj)
