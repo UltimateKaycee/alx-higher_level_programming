@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """For a function that returns dictionary description with simple
-data structure (list, dict, str, int, bool) for a JSON serialization of an object
+data structure (list, dict, str, int, bool) for a
+JSON serialization of an object
 """
 
 
